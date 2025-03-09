@@ -44,6 +44,7 @@ using System.Text;
 {
     internal const string STRNQ = "{ToString(),nq}";
     internal const string DBGVL = "{debuggerDisplay(),nq}";
+    internal const string DSPD_STR = $"/!\\ _disposed";
     internal const string DFLT_STR = "<default>$";
     /**
      * <doc><summary>Is set to the definition in <see cref="byte"/>(s) of pointer instance's size, a <see langword="const"/> alternative for <see cref="nint.Size"/>. This is platform dependent</summary></doc>
