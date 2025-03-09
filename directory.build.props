@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="IBM437"?>
+<Project DefaultTargets="Build">
+  <PropertyGroup Label="Global">
+    <!-- Pre compilation properties -->
+    <NoWarn>$(NoWarn);1735;8500;IDE0008;IDE0021;IDE0040;IDE0055;IDE0057;IDE0065;IDE0072;IDE0160;IDE0290;IDE1005;IDE1006;CA1715</NoWarn>
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+    <!-- <InvariantGlobalization>True</InvariantGlobalization> -->
+    <AccelerateBuildsInVisualStudio>True</AccelerateBuildsInVisualStudio>
+    <OptimizeImplicitlyTriggeredBuild>True</OptimizeImplicitlyTriggeredBuild>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <AnalysisLevel>preview</AnalysisLevel>
+    <Platforms>AnyCPU;x64</Platforms>
+    <AnalysisMode>All</AnalysisMode>
+
+    <!-- After compilation properties -->
+    <!-- <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads> -->
+    <UseWindowsThreadPool>True</UseWindowsThreadPool>
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <DebugType>pdbonly</DebugType>
+    <BaseOutputPath>..\..\..\..\..\artifacts</BaseOutputPath>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'Release'=='$(Configuration)'">
+    <CodeAnalysisTreatWarningsAsErrors>True</CodeAnalysisTreatWarningsAsErrors>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	<Optimize>True</Optimize>
+	<TrimMode>full</TrimMode>
+
+  </PropertyGroup>
+  <PropertyGroup Condition="'Debug'=='$(Configuration)'">
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <BaseOutputPath>$(BaseOutputPath)\dev</BaseOutputPath>
+
+  </PropertyGroup>
+  <PropertyGroup Condition="'x64'=='$(Platform)'">
+    <DefineConstants>$(DefineConstants);TARGET_64BIT</DefineConstants>
+  
+  </PropertyGroup>
+
+</Project>
